@@ -13,8 +13,8 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
-.c.cpp:
-	$(cXX) $(CXXFLAGS) -cpp $< -o $(<:.cpp=.o)
+.cpp.o:
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJS)
