@@ -7,4 +7,3 @@ void	Phonebook::search_contact(){
 void	Phonebook::add_contact(){
 	std::cout << "ADD" << std::endl;
 }
-

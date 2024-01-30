@@ -1,6 +1,6 @@
 NAME	= phonebook
 
-SRC		= main.cpp phonebook.cpp prompt.cpp
+SRC		= main.cpp Phonebook.cpp prompt.cpp
 
 OBJS	= $(SRC:.cpp=.o)
 

@@ -3,10 +3,11 @@
 
 #include <iostream>
 #include <string>
+#include "Contact.hpp"
 
 class Phonebook{
 	private:
-//		class contact	index[8];
+		class Contact	contacts[8];
 	public:
 		void	add_contact();
 		void	search_contact();
