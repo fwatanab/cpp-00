@@ -1,10 +1,10 @@
-#include "phonebook.hpp"
+#include "Phonebook.hpp"
 
-void	phonebook::search_contact(){
+void	Phonebook::search_contact(){
 	std::cout << "SEARCH" << std::endl;
 }
 
-void	phonebook::add_contact(){
+void	Phonebook::add_contact(){
 	std::cout << "ADD" << std::endl;
 }
 

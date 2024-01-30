@@ -4,7 +4,9 @@
 #include <iostream>
 #include <string>
 
-class phonebook{
+class Phonebook{
+	private:
+//		class contact	index[8];
 	public:
 		void	add_contact();
 		void	search_contact();
