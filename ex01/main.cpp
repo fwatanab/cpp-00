@@ -15,9 +15,9 @@ int	main(){
 
 	while (cmd != "EXIT")
 	{
-		cmd = prompt();
+		cmd = start_prompt();
 		if (!(cmd == "ADD" || cmd == "SEARCH" || cmd == "EXIT") || cmd.empty())
-			cmd = re_prompt();
+			cmd = re_start_prompt();
 		check_command(cmd, book);
 		if (std::cin.eof()){
 			std::cout << std::endl;

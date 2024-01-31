@@ -1,6 +1,6 @@
 #include "Phonebook.hpp"
 
-std::string	prompt(){
+std::string	start_prompt(){
 	std::string	cmd;
 
 	std::cout << "Welcome to the Phonebook!\n";
@@ -13,7 +13,7 @@ std::string	prompt(){
 	return cmd;
 }
 
-std::string	re_prompt(){
+std::string	re_start_prompt(){
 	std::string	cmd;
 
 	std::cout << "Invalid command. Please choose one of the following options:" << std::endl;
