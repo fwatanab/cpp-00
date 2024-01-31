@@ -10,6 +10,8 @@ std::string	start_prompt(){
 	std::cout << "EXIT: Exit the program.\n" << std::endl;
 	std::cout << "Enter your command: ";
 	std::getline(std::cin, cmd);
+	if (cmd != "EXIT")
+		std::cout << std::endl;
 	return cmd;
 }
 
@@ -22,5 +24,7 @@ std::string	re_start_prompt(){
 	std::cout << "EXIT: Exit the program.\n" << std::endl;
 	std::cout << "Please enter a valid command: ";
 	std::getline(std::cin, cmd);
+	if (cmd != "EXIT")
+		std::cout << std::endl;
 	return cmd;
 }
