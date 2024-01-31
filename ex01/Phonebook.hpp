@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <cctype>
 #include "Contact.hpp"
 
 class Phonebook{
@@ -13,7 +14,8 @@ class Phonebook{
 		void	search_contact();
 };
 
-std::string	prompt();
-std::string	re_prompt();
+std::string	start_prompt();
+std::string	re_start_prompt();
+std::string	add_prompt(std::string word);
 
 #endif

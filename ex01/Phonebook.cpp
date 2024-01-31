@@ -4,6 +4,14 @@ void	Phonebook::search_contact(){
 	std::cout << "SEARCH" << std::endl;
 }
 
+
 void	Phonebook::add_contact(){
-	std::cout << "ADD" << std::endl;
+	std::string	cmd;
+
+	while (!std::cin.eof())
+	{
+		cmd = add_prompt("first name");
+		if (!cmd.empty())
+			break ;
+	}
 }
