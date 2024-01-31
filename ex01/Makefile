@@ -1,10 +1,10 @@
 NAME	= phonebook
 
-SRC		= main.cpp Phonebook.cpp prompt.cpp
+SRC		= main.cpp Phonebook.cpp prompt.cpp add_prompt.cpp Contact.cpp
 
 OBJS	= $(SRC:.cpp=.o)
 
-CXX			= c++
+CXX			= g++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 RM			= rm -f
 
