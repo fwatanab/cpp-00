@@ -11,6 +11,7 @@ class Phonebook{
 		class Contact	contacts[8];
 		int				index;
 	public:
+		Phonebook();
 		void	add_contact();
 		void	search_contact();
 };
