@@ -9,6 +9,7 @@
 class Phonebook{
 	private:
 		class Contact	contacts[8];
+		int				index;
 	public:
 		void	add_contact();
 		void	search_contact();
@@ -16,6 +17,6 @@ class Phonebook{
 
 std::string	start_prompt();
 std::string	re_start_prompt();
-std::string	add_prompt(std::string word);
+std::string	add_prompt(std::string name);
 
 #endif
