@@ -13,7 +13,7 @@ class Phonebook{
 		int				index;
 	public:
 		Phonebook();
-		void	add_contact();
+		int		add_contact();
 		void	search_contact();
 };
 
