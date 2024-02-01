@@ -1,6 +1,6 @@
 NAME	= phonebook
 
-SRC		= main.cpp Phonebook.cpp prompt.cpp add_prompt.cpp Contact.cpp
+SRC		= main.cpp Phonebook.cpp prompt.cpp add_prompt.cpp Contact.cpp search_prompt.cpp
 
 OBJS	= $(SRC:.cpp=.o)
 
