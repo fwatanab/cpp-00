@@ -49,8 +49,9 @@ void	Phonebook::add_contact(){
 }
 
 void	Phonebook::search_contact(){
-	search_prompt();
+	search_start_prompt();
 	for (int i = 0; i < 8; i++){
-		prompt_name(i + 1, this->contacts[i].get_name("f_name"), this->contacts[i].get_name("l_name"), "", "");
+		prompt_name(i + 1, this->contacts[i].get_name("f_name"), this->contacts[i].get_name("l_name"), this->contacts[i].get_name("nick_name"), this->contacts[i].get_name("phone_nbr"));
 	}
+	std::cout << "--------------------------------------------------------" << std::endl;
 }
