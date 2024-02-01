@@ -2,7 +2,6 @@
 
 void	Contact::set_first_name(const std::string name){
 	f_name = name;
-	std::cout << f_name << std::endl;
 }
 
 void	Contact::set_last_name(const std::string name){
