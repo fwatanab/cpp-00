@@ -8,44 +8,54 @@ Phonebook::Phonebook(){
 void	Phonebook::add_contact(){
 	std::string	cmd;
 
-	while (!std::cin.eof()){
+	while (1){
 		cmd = add_prompt("first name");
-		if (!cmd.empty())
-			break ;
+		if (std::cin.eof())
+			return ;
+		if (cmd.empty())
+			std::cout << "Empty input is not allowed." << std::endl;
 	}
 	this->contacts[this->index].set_first_name(cmd);
 
-	while (!std::cin.eof()){
+	while (1){
 		cmd = add_prompt("last name");
-		if (!cmd.empty())
-			break ;
+		if (std::cin.eof())
+			return ;
+		if (cmd.empty())
+			std::cout << "Empty input is not allowed." << std::endl;
 	}
 	this->contacts[this->index].set_last_name(cmd);
 
-	while (!std::cin.eof()){
+	while (1){
 		cmd = add_prompt("nick name");
-		if (!cmd.empty())
-			break ;
+		if (std::cin.eof())
+			return ;
+		if (cmd.empty())
+			std::cout << "Empty input is not allowed." << std::endl;
 	}
 	this->contacts[this->index].set_nick_name(cmd);
 
-	while (!std::cin.eof()){
+	while (1){
 		cmd = add_prompt("phone number");
-		if (!cmd.empty())
-			break ;
+		if (std::cin.eof())
+			return ;
+		if (cmd.empty())
+			std::cout << "Empty input is not allowed." << std::endl;
 	}
 	this->contacts[this->index].set_phone_number(cmd);
 
-	while (!std::cin.eof()){
+	while (1){
 		cmd = add_prompt("darkest secret");
-		if (!cmd.empty())
-			break ;
+		if (std::cin.eof())
+			return ;
+		if (cmd.empty())
+			std::cout << "Empty input is not allowed." << std::endl;
 	}
 	this->contacts[this->index].set_darkest_secret(cmd);
-	if (this->index + 1 != 9)
-		this->index++;
-	else if (this->index + 1 == 9)
+	if (this->index >= 7)
 		this->index = 0;
+	else
+		this->index++;
 }
 
 void	Phonebook::search_contact(){
