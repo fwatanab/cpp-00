@@ -5,15 +5,9 @@ Phonebook::Phonebook(){
 	std::cout << "\nWelcome to the Phonebook!\n" << std::endl;
 }
 
-void	Phonebook::search_contact(){
-	std::cout << "SEARCH" << std::endl;
-}
-
-
 void	Phonebook::add_contact(){
 	std::string	cmd;
 
-	this->index = 0;
 	while (!std::cin.eof()){
 		cmd = add_prompt("first name");
 		if (!cmd.empty())
@@ -52,4 +46,11 @@ void	Phonebook::add_contact(){
 		this->index++;
 	else if (this->index + 1 == 9)
 		this->index = 0;
+}
+
+void	Phonebook::search_contact(){
+	search_prompt();
+	for (int i = 0; i < 8; i++){
+		prompt_name(i + 1, this->contacts[i].get_name("f_name"), this->contacts[i].get_name("l_name"), "", "");
+	}
 }
