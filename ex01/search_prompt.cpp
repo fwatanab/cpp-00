@@ -33,3 +33,11 @@ std::string	search_request_message(){
 	std::getline(std::cin, cmd);
 	return cmd;
 }
+
+void	prompt_index(std::string f_name, std::string l_name, std::string n_name, std::string nbr, std::string dark){
+	std::cout << "\n>>>\t" << "First name:\t" << f_name << std::endl;
+	std::cout << ">>>\t" << "Last name:\t" << l_name << std::endl;
+	std::cout << ">>>\t" << "Nick name:\t" << n_name << std::endl;
+	std::cout << ">>>\t" << "Phone number:\t" << nbr << std::endl;
+	std::cout << ">>>\t" << "Darkest secret:\t" << dark << std::endl << std::endl;
+}
