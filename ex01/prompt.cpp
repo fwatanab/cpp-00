@@ -7,7 +7,7 @@ std::string	start_prompt(){
 	std::cout << "ADD:\tAdd a new contact.\n";
 	std::cout << "SEARCH:\tSearch for an existing contact.\n";
 	std::cout << "EXIT:\tExit the program.\n" << std::endl;
-	std::cout << "Enter your command: ";
+	std::cout << "Please enter your command: ";
 	std::getline(std::cin, cmd);
 	if (cmd != "EXIT")
 		std::cout << std::endl;
