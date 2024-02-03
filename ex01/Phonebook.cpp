@@ -77,8 +77,9 @@ void	Phonebook::search_contact(){
 	}
 	std::cout << "--------------------------------------------------------" << std::endl;
 
+	std::string	cmd;
 	while (1){
-		std::string	cmd = search_request_message();
+		cmd = search_request_message();
 		if (std::cin.eof())
 			exit(EXIT_FAILURE);
 		if (cmd.empty())
@@ -92,4 +93,7 @@ void	Phonebook::search_contact(){
 			std::cout << "Please choose 0 or a number between 1 and " << this->count << "." << std::endl;
 		}
 	}
+	int	i = (std::atoi(cmd.c_str())) - 1;
+	if (cmd != "0")
+		prompt_index(this->contacts[i].get_name("f_name"), this->contacts[i].get_name("l_name"), this->contacts[i].get_name("nick_name"), this->contacts[i].get_name("phone_nbr"), this->contacts[i].get_name("darkest_secret"));
 }

@@ -25,4 +25,5 @@ std::string	add_prompt(std::string name);
 void		search_start_prompt();
 void		prompt_name(int index, std::string f_name, std::string l_name, std::string n_name, std::string nbr);
 std::string	search_request_message();
+void		prompt_index(std::string f_name, std::string l_name, std::string n_name, std::string nbr, std::string dark);
 #endif
