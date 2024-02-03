@@ -2,6 +2,7 @@
 
 Phonebook::Phonebook(){
 	this->index = 0;
+	this->count = 0;
 	std::cout << "\nWelcome to the Phonebook!\n" << std::endl;
 }
 
@@ -66,6 +67,7 @@ void	Phonebook::add_contact(){
 		this->index = 0;
 	else
 		this->index++;
+	this->count++;
 }
 
 void	Phonebook::search_contact(){
@@ -75,7 +77,19 @@ void	Phonebook::search_contact(){
 	}
 	std::cout << "--------------------------------------------------------" << std::endl;
 
-	prompt_request_index();
-	if (std::cin.eof())
-		exit(EXIT_FAILURE);
+	while (1){
+		std::string	cmd = search_request_message();
+		if (std::cin.eof())
+			exit(EXIT_FAILURE);
+		if (cmd.empty())
+			std::cout << "Empty input is not allowed." << std::endl;
+		else if (cmd == "0")
+			break ;
+		else if (0 < std::atoi(cmd.c_str()) && std::atoi(cmd.c_str()) <= this->count)
+			break ;
+		else{
+			std::cout << "Invalid selection" << std::endl;
+			std::cout << "Please choose 0 or a number between 1 and " << this->count << "." << std::endl;
+		}
+	}
 }
