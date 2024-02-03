@@ -24,7 +24,7 @@ void	prompt_name(int index, std::string f_name, std::string l_name, std::string 
 	std::cout << "|" << std::right << std::setw(10) << trim_and_dot(nbr) << "|" << std::endl;
 }
 
-std::string	prompt_request_index(){
+std::string	search_request_message(){
 	std::string	cmd;
 
 	std::cout << "\n0:\treturn to the main menu" << std::endl;
