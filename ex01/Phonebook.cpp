@@ -74,4 +74,8 @@ void	Phonebook::search_contact(){
 		prompt_name(i + 1, this->contacts[i].get_name("f_name"), this->contacts[i].get_name("l_name"), this->contacts[i].get_name("nick_name"), this->contacts[i].get_name("phone_nbr"));
 	}
 	std::cout << "--------------------------------------------------------" << std::endl;
+
+	prompt_request_index();
+	if (std::cin.eof())
+		exit(EXIT_FAILURE);
 }
