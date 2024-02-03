@@ -5,6 +5,7 @@
 #include <string>
 #include <cctype>
 #include <iomanip>
+#include <cstdlib>
 #include "Contact.hpp"
 
 class Phonebook{
@@ -13,7 +14,7 @@ class Phonebook{
 		int				index;
 	public:
 		Phonebook();
-		int		add_contact();
+		void	add_contact();
 		void	search_contact();
 };
 
