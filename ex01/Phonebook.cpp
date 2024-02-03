@@ -5,13 +5,13 @@ Phonebook::Phonebook(){
 	std::cout << "\nWelcome to the Phonebook!\n" << std::endl;
 }
 
-void	Phonebook::add_contact(){
+int	Phonebook::add_contact(){
 	std::string	cmd;
 
 	while (1){
 		cmd = add_prompt("first name");
 		if (std::cin.eof())
-			return ;
+			return 1;
 		if (cmd.empty())
 			std::cout << "Empty input is not allowed." << std::endl;
 	}
@@ -20,7 +20,7 @@ void	Phonebook::add_contact(){
 	while (1){
 		cmd = add_prompt("last name");
 		if (std::cin.eof())
-			return ;
+			return 1;
 		if (cmd.empty())
 			std::cout << "Empty input is not allowed." << std::endl;
 	}
@@ -29,7 +29,7 @@ void	Phonebook::add_contact(){
 	while (1){
 		cmd = add_prompt("nick name");
 		if (std::cin.eof())
-			return ;
+			return 1;
 		if (cmd.empty())
 			std::cout << "Empty input is not allowed." << std::endl;
 	}
@@ -38,7 +38,7 @@ void	Phonebook::add_contact(){
 	while (1){
 		cmd = add_prompt("phone number");
 		if (std::cin.eof())
-			return ;
+			return 1;
 		if (cmd.empty())
 			std::cout << "Empty input is not allowed." << std::endl;
 	}
@@ -47,7 +47,7 @@ void	Phonebook::add_contact(){
 	while (1){
 		cmd = add_prompt("darkest secret");
 		if (std::cin.eof())
-			return ;
+			return 1;
 		if (cmd.empty())
 			std::cout << "Empty input is not allowed." << std::endl;
 	}
