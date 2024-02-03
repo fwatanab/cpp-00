@@ -7,16 +7,12 @@ int	main(){
 	while (cmd != "EXIT")
 	{
 		cmd = start_prompt();
-		if (std::cin.eof()){
-			std::cout << std::endl;
-			break ;
-		}
+		if (std::cin.eof())
+			return 0;
 		while (!(cmd == "ADD" || cmd == "SEARCH" || cmd == "EXIT") || cmd.empty()){
 			cmd = re_start_prompt();
-			if (std::cin.eof()){
-				std::cout << std::endl;
-				break ;
-			}
+			if (std::cin.eof())
+				return 0;
 		}
 		if (cmd == "ADD"){
 			if (book.add_contact() == 1)
