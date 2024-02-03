@@ -8,16 +8,14 @@ int	main(){
 	{
 		cmd = start_prompt();
 		if (std::cin.eof())
-			return 0;
+			exit(EXIT_FAILURE);
 		while (!(cmd == "ADD" || cmd == "SEARCH" || cmd == "EXIT") || cmd.empty()){
 			cmd = re_start_prompt();
 			if (std::cin.eof())
-				return 0;
+				exit(EXIT_FAILURE);
 		}
-		if (cmd == "ADD"){
-			if (book.add_contact() == 1)
-				break ;
-		}
+		if (cmd == "ADD")
+			book.add_contact();
 		else if (cmd == "SEARCH")
 			book.search_contact();
 	}
