@@ -4,7 +4,7 @@ SRC		= main.cpp Phonebook.cpp prompt.cpp add_prompt.cpp Contact.cpp search_promp
 
 OBJS	= $(SRC:.cpp=.o)
 
-CXX			= g++
+CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 RM			= rm -f
 
