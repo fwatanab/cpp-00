@@ -6,15 +6,15 @@ int	ft_isupper(int c){
 	return 0;
 }
 
-void	print_upper(char *argv){
-	for(int i = 0; argv[i]; i++){
-		if (ft_isupper((int)argv[i]) == 1)
-			argv[i] = argv[i] - 32;
+void	print_upper(char *str) {
+	for(int i = 0; str[i]; i++){
+		if (std::islower(str[i]))
+			str[i] = std::toupper(str[i]);
 	}
-	std::cout << argv;
+	std::cout << str;
 }
 
-int	main(int argc, char **argv){
+int	main(int argc, char **argv) {
 	if (argc == 1){
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return 0;
