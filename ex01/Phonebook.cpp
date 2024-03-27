@@ -15,6 +15,8 @@ void	Phonebook::add_contact(){
 			exit(EXIT_FAILURE);
 		if (cmd.empty())
 			std::cout << "Empty input is not allowed." << std::endl;
+		else if (!std::none_of(cmd.begin(), cmd.end(), ::isdigit))
+			std::cout << "Error: Contain numbers." << std::endl;
 		else
 			break ;
 	}
@@ -26,6 +28,8 @@ void	Phonebook::add_contact(){
 			exit(EXIT_FAILURE);
 		if (cmd.empty())
 			std::cout << "Empty input is not allowed." << std::endl;
+		else if (!std::none_of(cmd.begin(), cmd.end(), ::isdigit))
+			std::cout << "Error: Contain numbers." << std::endl;
 		else
 			break ;
 	}
@@ -48,6 +52,8 @@ void	Phonebook::add_contact(){
 			exit(EXIT_FAILURE);
 		if (cmd.empty())
 			std::cout << "Empty input is not allowed." << std::endl;
+		else if (!std::all_of(cmd.begin(), cmd.end(), ::isdigit))
+			std::cout << "Error: Contains non-numeric characters." << std::endl;
 		else
 			break ;
 	}
